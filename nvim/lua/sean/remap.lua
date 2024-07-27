@@ -68,6 +68,13 @@ vim.api.nvim_create_user_command(
 	"write",
 	{}
 )
+
+-- Copy to system clipboard
+vim.keymap.set('n', "<leader>y", "\"+y")
+vim.keymap.set('n', "<leader>p", "\"+p")
+vim.keymap.set('v', "<leader>y", "\"+y")
+vim.keymap.set('v', "<leader>p", "\"+p")
+
 -- Gitsigns
 --local gs = package.loaded.gitsigns
 --vim.keymap.set('n', "<leader>hs", gs.stage_hunk)
