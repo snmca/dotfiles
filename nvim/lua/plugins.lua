@@ -19,6 +19,7 @@ return {
         'RainbowMultiDelim'
     }
 	},
+	'hrsh7th/nvim-cmp',
 	'projekt0n/github-nvim-theme',
 	'AlexvZyl/nordic.nvim',
 	{
