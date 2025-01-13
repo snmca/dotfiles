@@ -1,20 +1,42 @@
-command! W w
-command! Q q
-command! Wq wq
-command! WQ wq
-inoremap kj <Esc>
+" Set leader key to backslash
+let mapLeader = "\\"
+
+" .vimrc 
+set encoding=utf-8
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set mouse=a
 set nowrap
 set number
+set rnu
 set ruler
-set expandtab
-set shiftwidth=4
+set autoindent
 set smartindent
 set smarttab
-set softtabstop=4
 syntax enable
+
+" Misc
+set fillchars=eob:\
+
+" Case insentivie write + quit
+command W write
+command Q quit
+
+" Quicker Esc
+inoremap kj <Esc>
+inoremap Kj <Esc>
+inoremap kJ <Esc>
+vnoremap kj <Esc>
+vnoremap Kj <Esc>
+vnoremap kJ <Esc>
+
+" Visual
 set background=dark
-colorscheme habamax
 set laststatus=2
-set mouse=a
-set encoding=utf-8
-set colorcolumn=80
+set colorcolumn=80,88,120
+highligh ColorColumn ctermbg=238
+colorscheme habamax 
+
+" Key bindings
+map <leader>r :source $MYVIMRC<CR>
