@@ -23,6 +23,8 @@ vim.keymap.set('n', '<leader>b', ":bprevious<CR>")
 vim.keymap.set('n', '<leader>o', "o<Esc>")
 vim.keymap.set('n', '<leader>O', "O<Esc>")
 
+vim.keymap.set('n', '<leader>a', "@a<CR>")
+
 -- Shortcut for Esc which is easier to reach
 vim.keymap.set('i', 'kj', '<Esc>')
 vim.keymap.set('i', 'Kj', '<Esc>')
@@ -48,7 +50,8 @@ vim.keymap.set("n", ":W<CR>", ":w<CR>")
 vim.cmd[[ command! W w ]]
 
 -- 'Trouble' error viewer keybindings
-vim.keymap.set('n', "<leader>tt", function() require("trouble").toggle() end)
+opts = {mode = "n"}
+vim.keymap.set('n', "<leader>tt", function() require("trouble").toggle("diagnostics") end)
 
 opts = {noremap = true, silent = true }
 vim.keymap.set('n', "<leader>,", "<Cmd>BufferPrevious<CR>", opts)
@@ -74,6 +77,15 @@ vim.keymap.set('n', "<leader>y", "\"+y")
 vim.keymap.set('n', "<leader>p", "\"+p")
 vim.keymap.set('v', "<leader>y", "\"+y")
 vim.keymap.set('v', "<leader>p", "\"+p")
+
+
+-- Move lines up / down
+vim.keymap.set('n', "<M-j>", "<Cmd>:m +1<CR>")
+vim.keymap.set('n', "<M-k>", "<Cmd>:m -2<CR>")
+
+vim.keymap.set("n", "<M-q>", "iimport logging; _logger = logging.getLogger(__name__)<Esc>", { noremap = true, silent = true })
+vim.keymap.set("i", "<M-q>", "import logging; _logger = logging.getLogger(__name__)<Esc>", { noremap = true, silent = true })
+
 
 -- Gitsigns
 --local gs = package.loaded.gitsigns

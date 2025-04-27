@@ -1,22 +1,35 @@
-#import = ["~/.config/alacritty/themes/argonaut.yaml"]
-
 [env]
-TERM = "xterm-256color"
+TERM = "alacritty-direct"
 
 [font]
-size = 12.0
+size = 10.5
 
 [font.normal]
-family = "CaskaydiaCoveNerdFont"
-#style = "Retina"
+family = "CaskaydiaMono NFP"
+style = "Regular"
 
 [shell]
-program = "/bin/bash"
+program = "bash"
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+vi_mode_style = { shape = "Block", blinking = "Always"}
+blink_interval = 550
+blink_timeout = 0
+unfocused_hollow = true
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = false
 
 [window]
 dynamic_padding = false
 opacity = 1.0
 title = "Alacritty"
+dynamic_title = true
+decorations = "Full"
 
 [window.class]
 general = "Alacritty"
@@ -33,3 +46,8 @@ y = 6
 [window.position]
 x = 20
 y = 20
+
+[keyboard]
+bindings = [
+]
+
