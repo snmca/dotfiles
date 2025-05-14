@@ -13,7 +13,6 @@ return {
 	'sainnhe/gruvbox-material',
 
 	-- Misc
-	'hrsh7th/nvim-cmp',
 	'lewis6991/gitsigns.nvim',
 	'jacoborus/tender.vim',
 	'lukas-reineke/indent-blankline.nvim',

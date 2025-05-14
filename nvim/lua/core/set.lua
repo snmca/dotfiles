@@ -2,11 +2,11 @@ vim.opt.encoding = "utf-8"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.guicursor = ""
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 0  -- default to tabstop value
 vim.opt.autoindent = true
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.smartindent = true
 vim.opt.swapfile = false
@@ -20,18 +20,10 @@ vim.opt.scrolloff = 25
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "73,80"
+vim.opt.colorcolumn = "74,80,100"
 vim.opt.cursorline = true
 vim.opt.spelllang = 'en_ca'
 vim.opt.spell = true
 vim.opt.fileformats = {"unix", "dos"}
 vim.opt.eol = false
 vim.opt.fixendofline = false
-
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = "zaber-esi.xml",
-    callback = function()
-        vim.opt.fileformat = "dos"
-    end,
-})
-
