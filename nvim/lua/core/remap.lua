@@ -44,6 +44,10 @@ vim.keymap.set('v', 'KJ', '<Esc>')
 vim.keymap.set('s', 'KJ', '<Esc>')
 vim.keymap.set('t', 'KJ', [[<C-\><C-n>]], {noremap=true})
 
+-- Cut vs delete
+vim.keymap.set('n', '<leader>d', '""dd', {noremap=true})
+vim.keymap.set('n', 'dd', '"_dd', {noremap=true})
+
 -- :W to :w
 vim.keymap.set("n", ":W<CR>", ":w<CR>")
 
